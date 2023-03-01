@@ -1,0 +1,13 @@
+^aa(a|b)*$ ++token_one_match; {printf("Token 1: %s\n", yytext);}
+
+^(a|b)*aaa(a|b)*$ ++token_one_match; {printf("Token 2: %s\n", yytext);}
+
+^(a|b)*aa(a|b)*$ ++token_one_match; {printf("Token 3: %s\n", yytext);}
+
+^(ab|aa|ba|bb)*$ ++token_one_match; {printf("Token 4: %s\n", yytext);}
+
+^(b*(ab*ab*)*)$ ++token_one_match; {printf("Token 5: %s\n", yytext);}
+
+^(?:.{5})*$ ++token_one_match; {printf("Token 6: %s\n", yytext);}
+
+^((a{0,2}b|b*)*(a{0,2}))$ ++token_one_match; {printf("Token 7: %s\n", yytext);}
