@@ -1,0 +1,11 @@
+Some hints: 
+
+Use  \.  to specify anything except for a line break.
+Use ^ to match start of line
+Use $ to match end of line
+Use [^xy]  to not match characters x and y
+Use \n to match the line break
+
+
+
+^(([a-z0-9])([a-z-0-9|\.])*@([a-z0-9])+(\.)([a-z0-9]|\.[^\.])+) $ 
